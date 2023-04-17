@@ -5,7 +5,7 @@ export class Pyramid implements ThreeDimensionalShape{
         
       }
     show(): string {
-        return `Піраміда, Площа: ${this.calculateArea()}, Об'єм: ${this.calculateArea()}`;
+        return `Піраміда: Площа: ${this.calculateArea()}, Об'єм: ${this.calculateVolume()}`;
     }
    
     
@@ -13,14 +13,14 @@ export class Pyramid implements ThreeDimensionalShape{
         const baseArea = this.base * this.base;
         const volume = (1 / 3) * baseArea * this.height;
         const roundedVolume = Math.round(volume * 100) / 100;
-        return roundedVolume;
+        return Number(roundedVolume.toFixed(2));
     }
     calculateArea(): number {
         const baseArea = this.base * this.base;
         const triangleArea = (this.base * this.height) / 2;
         const surfaceArea = baseArea + 3 * triangleArea;
         const roundedSurfaceArea = Math.round(surfaceArea * 100) / 100;
-            return roundedSurfaceArea;
+            return Number(roundedSurfaceArea.toFixed(2));
     }
     
 }

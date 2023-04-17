@@ -5,12 +5,12 @@ export class Cube implements ThreeDimensionalShape{
        
       }
     show(): string {
-        return `Куб, Площа: ${this.calculateArea()}, Об'єм: ${this.calculateVolume()}`;
+        return `Куб: Площа: ${this.calculateArea()}, Об'єм: ${this.calculateVolume()}`;
     }
     calculateVolume(): number {
-        return 6 * this.side * this.side;
+        return Number((6 * this.side * this.side).toFixed(2));
     }
     calculateArea(): number {
-        return this.side * this.side * this.side;
+        return Number((this.side * this.side * this.side).toFixed(2));
     }
 }
